@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +141,9 @@ CART_SESSION_ID = 'cart'
 
 # SMTP settings
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+# STRIPE
+STRIPE_PUBLISHABLE_KEY = secret_keys.STRIPE_PUBLISHABLE_KEY
+STRIPE_SECRET_KEY = secret_keys.STRIPE_SECRET_KEY
+STRIPE_API_VERSION = secret_keys.STRIPE_API_VERSION
